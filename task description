@@ -665,6 +665,8 @@ join address a on a.id=h.address_id
 join owners o on o.id=h.owners_id
 where h.room=(select max(room) from houses)
 
+--17
+select * from customers c where c.marital_status='Married' and c.nationality='Kyrgyz'
 
 
 --19
