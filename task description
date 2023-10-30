@@ -567,6 +567,11 @@ select * from customers
 where date_of_birth<'1999-10-31'
 limit 15 offset 10;
 
+select c.*
+from customers c
+where c.date_of_birth<'1999-04-03' offset 10
+
+
 --6
 select o.*, h.house_type, h.rating 
 from owners o
