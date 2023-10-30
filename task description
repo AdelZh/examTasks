@@ -551,6 +551,16 @@ join customers c on c.id=rn.customer_id
 join agencies a on a.id=rn.agency_id
 
 
+select h.description, o.first_name, c.first_name, a.name
+from rent_info r
+join houses h on h.id=r.house_id
+join owners o on o.id=r.owners_id
+join customers c on c.id=r.customer_id
+join agencies a on a.id=r.agency_id
+
+
+
+
 
 --5
 select * from customers
