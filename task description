@@ -676,6 +676,13 @@ join rent_info r on h.id=r.house_id
 join address a on a.id=h.address_id
 where a.city='Bishkek'
 
+select h.*, a.city, c.first_name
+from houses h
+inner join address a on a.id=h.address_id
+inner join customers c on c.id=h.id
+where a.city='Bishkek'
+
+
 --20
 select gender, count(*) from customers
 group by gender
