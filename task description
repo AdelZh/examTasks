@@ -701,7 +701,6 @@ group by h.description, o.first_name
 order by max desc limit 1
 
 
-
 select h.*, o.first_name
 from houses h
 join owners o on o.id=h.owners_id
@@ -714,11 +713,11 @@ join address ad on ad.id=a.address_id
 where ad.region='Asanbai'
 
 --24
-select a.*, ad.region
-from agencies a
-join address ad on ad.id=a.address_id
-where ad.region='Asanbai'
-	
+select h.*
+from houses h
+where h.rating=(select max(rating) from houses h) order by h.rating desc limit 5
+
+
 --25
 select the owners who has avg age, and home, and home address
 select o.first_name, h.description, a.region
