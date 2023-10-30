@@ -589,6 +589,12 @@ from houses h
 where House_type='Apartment' or House_type='House' 
 group by House_type
 
+select h.house_type, count(*) as count, sum(h.price) as sum
+from houses h
+where h.house_type='Apartment'
+group by h.house_type
+
+
 --8
 select a.name, an.region, h.description, ad2.region
 from agencies a
